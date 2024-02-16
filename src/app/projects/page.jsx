@@ -10,9 +10,9 @@ import logoPlanetaria from '@/images/logos/planetaria.svg'
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'Classy Diagnosis',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
+      'A diagnostic tool to assist a Physical Therapist with classifying a mechanical injury.',
     link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
     logo: logoPlanetaria,
   },
@@ -65,8 +65,8 @@ export const metadata = {
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      title="Things I’ve made."
+      intro="Below are some of the websites and web applications that I have created for real clients, and others are just examples.  "
     >
       <ul
         role="list"

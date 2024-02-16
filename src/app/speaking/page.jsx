@@ -1,81 +1,148 @@
-import { Card } from '@/components/Card'
-import { Section } from '@/components/Section'
-import { SimpleLayout } from '@/components/SimpleLayout'
-
-function SpeakingSection({ children, ...props }) {
+export default function Example() {
   return (
-    <Section {...props}>
-      <div className="space-y-16">{children}</div>
-    </Section>
-  )
-}
-
-function Appearance({ title, description, event, cta, href }) {
-  return (
-    <Card as="article">
-      <Card.Title as="h3" href={href}>
-        {title}
-      </Card.Title>
-      <Card.Eyebrow decorate>{event}</Card.Eyebrow>
-      <Card.Description>{description}</Card.Description>
-      <Card.Cta>{cta}</Card.Cta>
-    </Card>
-  )
-}
-
-export const metadata = {
-  title: 'Speaking',
-  description:
-    'I’ve spoken at events all around the world and been interviewed for many podcasts.',
-}
-
-export default function Speaking() {
-  return (
-    <SimpleLayout
-      title="I’ve spoken at events all around the world and been interviewed for many podcasts."
-      intro="One of my favorite ways to share my ideas is live on stage, where there’s so much more communication bandwidth than there is in writing, and I love podcast interviews because they give me the opportunity to answer questions instead of just present my opinions."
-    >
-      <div className="space-y-20">
-        <SpeakingSection title="Conferences">
-          <Appearance
-            href="#"
-            title="In space, no one can watch you stream — until now"
-            description="A technical deep-dive into HelioStream, the real-time streaming library I wrote for transmitting live video back to Earth."
-            event="SysConf 2021"
-            cta="Watch video"
+    <div className="relative isolate bg-white dark:bg-gray-800 px-6 py-24 sm:py-32 lg:px-8">
+      <svg
+        className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+        aria-hidden="true"
+      >
+        <defs>
+          <pattern
+            id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527"
+            width={200}
+            height={200}
+            x="50%"
+            y={-64}
+            patternUnits="userSpaceOnUse"
+          >
+            <path d="M100 200V.5M.5 .5H200" fill="none" />
+          </pattern>
+        </defs>
+        <svg x="50%" y={-64} className="overflow-visible fill-gray-50">
+          <path
+            d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M299.5 800h201v201h-201Z"
+            strokeWidth={0}
           />
-          <Appearance
-            href="#"
-            title="Lessons learned from our first product recall"
-            description="They say that if you’re not embarassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated."
-            event="Business of Startups 2020"
-            cta="Watch video"
-          />
-        </SpeakingSection>
-        <SpeakingSection title="Podcasts">
-          <Appearance
-            href="#"
-            title="Using design as a competitive advantage"
-            description="How we used world-class visual design to attract a great team, win over customers, and get more press for Planetaria."
-            event="Encoding Design, July 2022"
-            cta="Listen to podcast"
-          />
-          <Appearance
-            href="#"
-            title="Bootstrapping an aerospace company to $17M ARR"
-            description="The story of how we built one of the most promising space startups in the world without taking any capital from investors."
-            event="The Escape Velocity Show, March 2022"
-            cta="Listen to podcast"
-          />
-          <Appearance
-            href="#"
-            title="Programming your company operating system"
-            description="On the importance of creating systems and processes for running your business so that everyone on the team knows how to make the right decision no matter the situation."
-            event="How They Work Radio, September 2021"
-            cta="Listen to podcast"
-          />
-        </SpeakingSection>
+        </svg>
+        <rect width="100%" height="100%" strokeWidth={0} fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)" />
+      </svg>
+      <div className="mx-auto max-w-xl lg:max-w-4xl">
+        <h2 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100">Let’s talk about your project</h2>
+        <p className="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-300">
+          We help companies and individuals build out their brand guidelines.
+        </p>
+        <div className="mt-16 flex flex-col gap-16 sm:gap-y-20 lg:flex-row">
+          <form action="#" method="POST" className="lg:flex-auto">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+              <div>
+                <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100">
+                  First name
+                </label>
+                <div className="mt-2.5">
+                  <input
+                    type="text"
+                    name="first-name"
+                    id="first-name"
+                    autoComplete="given-name"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 dark:text-gray-100 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+              <div>
+                <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100">
+                  Last name
+                </label>
+                <div className="mt-2.5">
+                  <input
+                    type="text"
+                    name="last-name"
+                    id="last-name"
+                    autoComplete="family-name"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 dark:text-gray-100 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+              <div>
+                <label htmlFor="budget" className="block text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100">
+                  Budget
+                </label>
+                <div className="mt-2.5">
+                  <input
+                    id="budget"
+                    name="budget"
+                    type="text"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 dark:text-gray-100 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+              <div>
+                <label htmlFor="website" className="block text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100">
+                  Website
+                </label>
+                <div className="mt-2.5">
+                  <input
+                    type="url"
+                    name="website"
+                    id="website"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 dark:text-gray-100 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+              <div className="sm:col-span-2">
+                <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100">
+                  Message
+                </label>
+                <div className="mt-2.5">
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 dark:text-gray-100 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    defaultValue={''}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="mt-10">
+              <button
+                type="submit"
+                className="block w-full rounded-md bg-indigo-600 dark:bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 dark:hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              >
+                Let’s talk
+              </button>
+            </div>
+            <p className="mt-4 text-sm leading-6 text-gray-500 dark:text-gray-400">
+              By submitting this form, I agree to the{' '}
+              <a href="#" className="font-semibold text-indigo-600 dark:text-indigo-400">
+                privacy&nbsp;policy
+              </a>
+              .
+            </p>
+          </form>
+          <div className="lg:mt-6 lg:w-80 lg:flex-none">
+            <img className="h-12 w-auto" src="https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg" alt="" />
+            <figure className="mt-10">
+              <blockquote className="text-lg font-semibold leading-8 text-gray-900 dark:text-gray-100">
+                <p>
+                  “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias
+                  molestiae. Numquam corrupti in laborum sed rerum et corporis.”
+                </p>
+              </blockquote>
+              <figcaption className="mt-10 flex gap-x-6">
+                <img
+                  src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=96&h=96&q=80"
+                  alt=""
+                  className="h-12 w-12 flex-none rounded-full bg-gray-50"
+                />
+                <div>
+                  <div className="text-base font-semibold text-gray-900 dark:text-gray-100">Brenna Goyette</div>
+                  <div className="text-sm leading-6 text-gray-600 dark:text-gray-300">CEO of Workcation</div>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
       </div>
-    </SimpleLayout>
+    </div>
   )
 }
+
